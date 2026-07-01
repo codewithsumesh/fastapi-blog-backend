@@ -17,7 +17,7 @@ app.mount('/images',StaticFiles(directory="images"),name='images')  # name is in
 #CORS-Cross-Origin Resource Sharing is a browser security rule
 #which websites are allowed to access your FastApi Application
 origins = [
-    'https://fastapi-blog-frontend.onrender.com/'   # React app runs at 3000
+    'https://fastapi-blog-frontend.onrender.com'   # React app runs at 3000
 ]
 
 app.add_middleware(
