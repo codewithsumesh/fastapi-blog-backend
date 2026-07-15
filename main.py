@@ -14,6 +14,10 @@ models.Base.metadata.create_all(engine)
 #mount means connect to url,whith out mount fast api does not know what image means.
 app.mount('/images',StaticFiles(directory="images"),name='images')  # name is internal reference for fastapi
 
+@app.get("/")   
+def home():
+    return {"message": "FastAPI Blog API is running"}
+
 #CORS-Cross-Origin Resource Sharing is a browser security rule
 #which websites are allowed to access your FastApi Application
 origins = [
